@@ -1,0 +1,37 @@
+Title: Git Deployment + Debugging Summary (April 30)
+Project Context: Testing and enhancing the Python script that auto-syncs ChatGPT-generated learning logs into a Word document, with improved formatting and log replacement support.
+
+Key Accomplishments:
+1. Installed python-docx with pip
+• Used: python3 -m pip install python-docx
+2. Fixed pip not found error
+• Confirmed Python 3 was installed
+• Used python3 -m pip instead of pip
+3. Ran and tested log appending script
+• Created append_log_to_docx.py
+• Read from sample_log.txt and appended to Programming Learning Log.docx
+4. Diagnosed missing log error
+• Found that .docx file was locked by Word
+• Closed it before running script to resolve
+5. Fixed bullet point formatting
+• Removed invalid 'List Bullet' style
+• Used manual bullet symbol and indentation
+6. Improved layout
+• Added blank lines before headings like "Key Accomplishments", "Reflection"
+7. Built log replacement with --replace-last
+• Detected last log via Heading 2 style
+• Cleared only the most recent entry and replaced with updated content
+
+Next Steps (Optional):
+• Add clipboard integration to skip .txt files
+• Create project-level tags or filters
+• Explore .md export and TOC generation
+• Explore .md export and TOC generation
+
+
+Reflection:
+• Learned to identify and fix Word style errors in Python
+• Improved understanding of Python’s paragraph handling and indent formatting
+• Practiced adding logic gates with optional arguments like --replace-last
+• Debugged Word document locking and learned how `.docx` behaves with open apps
+• Saw the value of structured logging in tracking dev learning over time
